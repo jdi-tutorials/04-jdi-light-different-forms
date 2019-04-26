@@ -12,7 +12,5 @@ public class LoginForm extends Form<User> {
     @UI("#login-button") Button loginButton;
 
     @Override
-    public boolean isHidden() {
-        return name.isHidden();
-    }
+    public boolean isHidden() { return name.isHidden(); }
 }
