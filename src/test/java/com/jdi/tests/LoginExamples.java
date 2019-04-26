@@ -31,6 +31,19 @@ public class LoginExamples implements TestsInit {
         userName.is().disappear();
     }
 
+    // Login Form in Selenide
+    @Test
+    public void selenideTest() {
+        selenideLoginForm.loginAs(ROMAN);
+        userName.is().displayed();
+    }
+    @Test
+    public void selenideNameTest() {
+        selenideLoginForm.name.clear();
+        selenideLoginForm.name.sendKeys("Alex");
+        selenideLoginForm.loginButton.click();
+        userName.is().disappear();
+    }
     // Login Form in JDI Light
     @Test
     public void loginTest() {

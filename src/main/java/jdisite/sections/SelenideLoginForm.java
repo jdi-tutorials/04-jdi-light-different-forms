@@ -1,15 +1,14 @@
 package jdisite.sections;
 
-import com.epam.jdi.light.elements.pageobjects.annotations.FindBy;
-import com.epam.jdi.light.ui.html.common.Button;
-import com.epam.jdi.light.ui.html.common.TextField;
 import jdisite.entities.User;
 import org.openqa.selenium.WebElement;
 
-public class SeleniumLoginForm {
-    @FindBy(id = "name") public WebElement name;
-    @FindBy(id = "password") public WebElement password;
-    @FindBy(id = "login-button") public WebElement loginButton;
+import static com.epam.jdi.light.elements.init.UIFactory.$;
+
+public class SelenideLoginForm {
+    public WebElement name = $("#name");
+    public WebElement password = $("#password");
+    public WebElement loginButton = $("#login-button");
 
     public boolean isHidden() {
         return !name.isDisplayed();

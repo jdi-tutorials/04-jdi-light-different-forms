@@ -18,7 +18,6 @@ public interface TestsInit {
         logger.setLogLevel(STEP);
         initElements(JDISite.class);
         homePage.open();
-        loginAs(ROMAN);
     }
     @AfterSuite(alwaysRun = true)
     static void teardown() {

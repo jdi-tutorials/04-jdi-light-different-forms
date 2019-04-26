@@ -13,6 +13,7 @@ import jdisite.pages.ContactPage;
 import jdisite.pages.HomePage;
 import jdisite.sections.LoginForm;
 import jdisite.sections.LoginFormSmart;
+import jdisite.sections.SelenideLoginForm;
 import jdisite.sections.SeleniumLoginForm;
 
 @JSite("https://jdi-testing.github.io/jdi-light/")
@@ -24,6 +25,7 @@ public class JDISite {
     public static Form<User> lightLoginForm;
     public static LoginFormSmart loginFormSmart;
     public static SeleniumLoginForm seleniumloginForm;
+    public static SelenideLoginForm selenideLoginForm;
     @UI("#contact-form")
     public static Form<ContactInfo> lightContactForm;
 
