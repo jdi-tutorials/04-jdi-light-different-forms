@@ -11,9 +11,7 @@ public class SeleniumLoginForm {
     @FindBy(id = "password") public WebElement password;
     @FindBy(id = "login-button") public WebElement loginButton;
 
-    public boolean isHidden() {
-        return !name.isDisplayed();
-    }
+    public boolean isHidden() { return !name.isDisplayed(); }
     public void loginAs(User user) {
         if (user.name != null) {
             this.name.clear();
