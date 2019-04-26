@@ -7,6 +7,7 @@ import com.epam.jdi.light.ui.html.common.Button;
 import com.epam.jdi.light.ui.html.common.Link;
 import com.epam.jdi.light.ui.html.common.Text;
 import com.epam.jdi.light.ui.html.complex.Menu;
+import jdisite.entities.ContactInfo;
 import jdisite.entities.User;
 import jdisite.pages.ContactPage;
 import jdisite.pages.HomePage;
@@ -20,9 +21,11 @@ public class JDISite {
     public static ContactPage contactPage;
 
     public static LoginForm loginForm;
-    public static Form<User> userForm;
+    public static Form<User> lightLoginForm;
     public static LoginFormSmart loginFormSmart;
     public static SeleniumLoginForm seleniumloginForm;
+    @UI("#contact-form")
+    public static Form<ContactInfo> lightContactForm;
 
     @UI("img#user-icon") public static Link userIcon;
     @UI("#user-name") public static Text userName;

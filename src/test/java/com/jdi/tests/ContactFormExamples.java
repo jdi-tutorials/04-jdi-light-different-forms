@@ -28,4 +28,9 @@ public class ContactFormExamples implements TestsInit {
         contactFormSmart.submit(SIMPLE_CONTACT);
         contactFormSmart.check(SIMPLE_CONTACT);
     }
+    @Test
+    public void lightContactFormTest() {
+        lightContactForm.submit(SIMPLE_CONTACT);
+        lightContactForm.check(SIMPLE_CONTACT);
+    }
 }

@@ -52,8 +52,8 @@ public class LoginExamples implements TestsInit {
 
     // Login Form without Page Object in JDI Light
     @Test
-    public void login1Test() {
-        userForm.loginAs(ROMAN);
+    public void lightLogin1Test() {
+        lightLoginForm.loginAs(ROMAN);
         userName.is().displayed();
     }
 }
