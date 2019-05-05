@@ -20,14 +20,14 @@ public class LoginExamples implements TestsInit {
     // Login Form in Selenium
     @Test
     public void seleniumTest() {
-        seleniumloginForm.loginAs(ROMAN);
+        seleniumLoginForm.loginAs(ROMAN);
         userName.is().displayed();
     }
     @Test
     public void seleniumNameTest() {
-        seleniumloginForm.name.clear();
-        seleniumloginForm.name.sendKeys("Alex");
-        seleniumloginForm.loginButton.click();
+        seleniumLoginForm.name.clear();
+        seleniumLoginForm.name.sendKeys("Alex");
+        seleniumLoginForm.loginButton.click();
         userName.is().disappear();
     }
 
@@ -39,9 +39,7 @@ public class LoginExamples implements TestsInit {
     }
     @Test
     public void selenideNameTest() {
-        selenideLoginForm.name.clear();
-        selenideLoginForm.name.sendKeys("Alex");
-        selenideLoginForm.loginButton.click();
+        selenideLoginForm.loginAs(ALEX);
         userName.is().disappear();
     }
     // Login Form in JDI Light

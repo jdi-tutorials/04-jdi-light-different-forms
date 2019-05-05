@@ -20,7 +20,7 @@ public class JDISite {
     public static LoginForm loginForm;
     public static Form<User> lightLoginForm;
     public static LoginFormSmart loginFormSmart;
-    public static SeleniumLoginForm seleniumloginForm;
+    public static SeleniumLoginForm seleniumLoginForm;
     public static SelenideLoginForm selenideLoginForm;
 
     @UI("img#user-icon") public static Link userIcon;

@@ -10,7 +10,4 @@ public class LoginForm extends Form<User> {
     @UI("#name") TextField name;
     @UI("#password") TextField password;
     @UI("#login-button") Button loginButton;
-
-    @Override
-    public boolean isHidden() { return name.isHidden(); }
 }
