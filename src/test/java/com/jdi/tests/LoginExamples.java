@@ -23,6 +23,11 @@ public class LoginExamples implements TestsInit {
         seleniumLoginForm.loginAs(ROMAN);
         userName.is().displayed();
     }
+    @Test(enabled = false) // Will fail because ALEX.password == null
+    public void failSeleniumTest() {
+        seleniumLoginForm.login(ALEX);
+        userName.is().disappear();
+    }
     @Test
     public void seleniumNameTest() {
         seleniumLoginForm.name.clear();

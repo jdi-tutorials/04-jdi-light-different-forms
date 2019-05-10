@@ -10,6 +10,11 @@ public class SeleniumLoginForm {
     @FindBy(id = "name") public WebElement name;
     @FindBy(id = "password") public WebElement password;
     @FindBy(id = "login-button") public WebElement loginButton;
+    public void login(User user) {
+        name.sendKeys(user.name);
+        password.sendKeys(user.password);
+        loginButton.click();
+    }
 
     public void loginAs(User user) {
         if (user.name != null) {
