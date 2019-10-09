@@ -1,8 +1,7 @@
 package jdisite.sections;
 
-import com.epam.jdi.light.elements.base.UIElement;
+import com.epam.jdi.light.elements.common.UIElement;
 import jdisite.entities.User;
-import org.openqa.selenium.WebElement;
 
 import static com.epam.jdi.light.elements.init.UIFactory.$;
 
@@ -12,14 +11,8 @@ public class SelenideLoginForm {
        loginButton = $("#login-button");
 
     public void loginAs(User user) {
-        if (user.name != null) {
-            name.clear();
-            name.sendKeys(user.name);
-        }
-        if (user.password != null) {
-            password.clear();
-            password.sendKeys(user.password);
-        }
-        loginButton.click();
+        $("#name").setValue(user.name);
+        $("#password").setValue(user.password);
+        $("#login-button").click();
     }
 }

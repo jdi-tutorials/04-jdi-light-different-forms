@@ -5,8 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.jdi.states.State.loggedOut;
-import static com.jdi.test.data.DefaultDataProvider.ALEX;
-import static com.jdi.test.data.DefaultDataProvider.ROMAN;
+import static com.jdi.test.data.DefaultDataProvider.*;
 import static jdisite.JDISite.*;
 
 public class LoginExamples implements TestsInit {
@@ -19,20 +18,20 @@ public class LoginExamples implements TestsInit {
 
     // Login Form in Selenium
     @Test
-    public void seleniumTest() {
-        seleniumLoginForm.loginAs(ROMAN);
-        userName.is().displayed();
-    }
-    @Test(enabled = false) // Will fail because ALEX.password == null
-    public void failSeleniumTest() {
-        seleniumLoginForm.login(ALEX);
-        userName.is().disappear();
-    }
-    @Test
     public void seleniumNameTest() {
         seleniumLoginForm.name.clear();
         seleniumLoginForm.name.sendKeys("Alex");
         seleniumLoginForm.loginButton.click();
+        userName.is().disappear();
+    }
+    @Test
+    public void seleniumTest() {
+        seleniumLoginForm.loginAs(ROMAN);
+        userName.is().displayed();
+    }
+    @Test
+    public void failSeleniumTest() {
+        seleniumLoginForm.login(ALEX_SELENIDE);
         userName.is().disappear();
     }
 
@@ -44,7 +43,7 @@ public class LoginExamples implements TestsInit {
     }
     @Test
     public void selenideNameTest() {
-        selenideLoginForm.loginAs(ALEX);
+        selenideLoginForm.loginAs(ALEX_SELENIDE);
         userName.is().disappear();
     }
     // Login Form in JDI Light

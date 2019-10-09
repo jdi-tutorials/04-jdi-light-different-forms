@@ -8,4 +8,5 @@ public class DefaultDataProvider {
         c.password = "Jdi1234";}
     );
     public static User ALEX = new User().set(c -> c.name = "Alexander" );
+    public static User ALEX_SELENIDE = new User().set(c -> {c.name = "Alexander"; c.password = "";} );
 }
