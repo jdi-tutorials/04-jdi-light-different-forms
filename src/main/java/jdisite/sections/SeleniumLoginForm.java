@@ -1,8 +1,6 @@
 package jdisite.sections;
 
 import com.epam.jdi.light.elements.pageobjects.annotations.FindBy;
-import com.epam.jdi.light.ui.html.elements.common.Button;
-import com.epam.jdi.light.ui.html.elements.common.TextField;
 import jdisite.entities.User;
 import org.openqa.selenium.WebElement;
 
